@@ -1,0 +1,886 @@
+{
+ "devices": [
+  {
+   "id": "k35-k20-k9x",
+   "name": "K35-K20-K9X",
+   "type": "AATD",
+   "qag": "3.1",
+   "approved": "2023-11-21",
+   "expires": "2028-11-30",
+   "docs": {
+    "loa": "docs/k35-k20-k9x/loa.pdf",
+    "qag": "docs/k35-k20-k9x/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.1B",
+     "devices": [
+      "K35",
+      "K9X"
+     ],
+     "approved": "2020-01-17",
+     "expires": "2025-01-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/k35-k9x/2.1B/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/k35-k9x/2.1B/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.0",
+     "devices": [
+      "K35",
+      "K9X"
+     ],
+     "approved": "2018-09-17",
+     "expires": "2023-09-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/k35-k9x/2.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/k35-k9x/2.0/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.1",
+     "devices": [
+      "K35",
+      "K9X"
+     ],
+     "approved": "2015-07-16",
+     "expires": "2020-07-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/k35-k9x/1.1/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/k35-k9x/1.1/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "K35"
+     ],
+     "approved": "2012-11-16",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/k35-k9x/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/k35-k9x/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "crv",
+   "name": "CRV",
+   "type": "AATD",
+   "qag": "3.0",
+   "approved": "2024-02-02",
+   "expires": "2029-02-28",
+   "docs": {
+    "loa": "docs/crv/loa.pdf",
+    "qag": "docs/crv/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.1B",
+     "devices": [
+      "CRV"
+     ],
+     "approved": "2019-02-27",
+     "expires": "2024-02-29",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/crv/2.1B/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/crv/2.1B/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.0a",
+     "devices": [
+      "CRV"
+     ],
+     "approved": "2018-04-27",
+     "expires": "2023-04-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/crv/2.0a/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/crv/2.0a/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "CRV"
+     ],
+     "approved": "2014-03-04",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/crv/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/crv/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "cj1-plus",
+   "name": "CJ1+",
+   "type": "AATD",
+   "qag": "3.0",
+   "approved": "2024-04-08",
+   "expires": "2029-04-30",
+   "docs": {
+    "loa": "docs/cj1-plus/loa.pdf",
+    "qag": "docs/cj1-plus/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.0B",
+     "devices": [
+      "CJ1+"
+     ],
+     "approved": "2019-04-23",
+     "expires": "2024-04-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/cj1plus/2.0B/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/cj1plus/2.0B/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "CJ1+"
+     ],
+     "approved": "2015-12-14",
+     "expires": "2020-12-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/cj1plus/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/cj1plus/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mdn-mrg",
+   "name": "MDN/MRG",
+   "type": "AATD",
+   "qag": "2.1",
+   "approved": "2024-12-12",
+   "expires": "2029-12-31",
+   "docs": {
+    "loa": "docs/mdn-mrg/loa.pdf",
+    "qag": "docs/mdn-mrg/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.0B",
+     "devices": [
+      "MDN",
+      "MRG"
+     ],
+     "approved": "2019-12-17",
+     "expires": "2024-12-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/mdn-mrg/2.0B/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/mdn-mrg/2.0B/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.1",
+     "devices": [
+      "MDN",
+      "MRG"
+     ],
+     "approved": "2016-06-29",
+     "expires": "2021-06-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/mdn-mrg/1.1/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/mdn-mrg/1.1/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "MDN"
+     ],
+     "approved": "2011-08-16",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/mdn-mrg/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/mdn-mrg/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "mx2",
+   "name": "MX2",
+   "type": "AATD",
+   "qag": "2.2",
+   "approved": "2024-12-12",
+   "expires": "2029-12-31",
+   "docs": {
+    "loa": "docs/mx2/loa.pdf",
+    "qag": "docs/mx2/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.1D",
+     "devices": [
+      "MX2"
+     ],
+     "approved": "2020-01-16",
+     "expires": "2024-12-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/mx2/2.1D/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/mx2/2.1D/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.0B",
+     "devices": [
+      "MX2"
+     ],
+     "approved": "2018-08-01",
+     "expires": "2023-08-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/mx2/2.0B/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/mx2/2.0B/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "MX2"
+     ],
+     "approved": "2013-08-23",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/mx2/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/mx2/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "c510",
+   "name": "C510",
+   "type": "AATD",
+   "qag": "2.2",
+   "approved": "2025-01-17",
+   "expires": "2030-01-31",
+   "docs": {
+    "loa": "docs/c510/loa.pdf",
+    "qag": "docs/c510/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.1A",
+     "devices": [
+      "C510"
+     ],
+     "approved": "2020-01-17",
+     "expires": "2025-01-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/c510/2.1A/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/c510/2.1A/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.0A",
+     "devices": [
+      "C510"
+     ],
+     "approved": "2018-06-19",
+     "expires": "2023-06-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/c510/2.0A/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/c510/2.0A/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "C510"
+     ],
+     "approved": "2013-11-20",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/c510/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/c510/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "fmx-ld-sd-mcx",
+   "name": "FMX/LD/SD/MCX",
+   "type": "AATD",
+   "qag": "4.12A",
+   "approved": "2026-06-18",
+   "expires": "2031-06-30",
+   "docs": {
+    "loa": "docs/fmx-ld-sd-mcx/loa.pdf",
+    "qag": "docs/fmx-ld-sd-mcx/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "4.11",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2025-07-03",
+     "expires": "2030-07-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.11/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.11/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.10",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2023-11-21",
+     "expires": "2028-11-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.10/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.10/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.9A",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2021-10-21",
+     "expires": "2026-10-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.9A/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.9A/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.8A",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2020-09-10",
+     "expires": "2025-09-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.8A/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.8A/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.7I",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2020-01-16",
+     "expires": "2025-01-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.7I/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.7I/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.6E",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2019-02-26",
+     "expires": "2024-02-28",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.6E/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.6E/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.5E",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2018-06-15",
+     "expires": "2023-06-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.5E/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.5E/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.4",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX",
+      "MCX"
+     ],
+     "approved": "2014-12-19",
+     "expires": "2019-11-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.4/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.4/QAG.pdf"
+      },
+      {
+       "label": "LOA (original, 2013-02-14)",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.4/LOA-original.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.3",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX"
+     ],
+     "approved": "2012-07-09",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.3/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.3/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "4.2",
+     "devices": [
+      "LD",
+      "SD",
+      "FMX"
+     ],
+     "approved": "2012-03-09",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.2/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/ld-sd-fmx-mcx/4.2/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b190x",
+   "name": "B190X",
+   "type": "AATD",
+   "qag": "2.1",
+   "approved": "2026-07-02",
+   "expires": "2031-07-31",
+   "docs": {
+    "loa": "docs/b190x/loa.pdf",
+    "qag": "docs/b190x/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "2.0",
+     "devices": [
+      "B190X"
+     ],
+     "approved": "2021-07-22",
+     "expires": "2026-07-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/b190x/2.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/b190x/2.0/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "B190X"
+     ],
+     "approved": "2017-04-24",
+     "expires": "2022-04-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/b190x/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/b190x/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "td-td2",
+   "name": "TD/TD2",
+   "type": "BATD",
+   "qag": "3.3",
+   "approved": "2026-07-02",
+   "expires": "2031-07-31",
+   "docs": {
+    "loa": "docs/td-td2/loa.pdf",
+    "qag": "docs/td-td2/qag.pdf"
+   },
+   "previous": [
+    {
+     "version": "3.2",
+     "devices": [
+      "TD",
+      "TD2"
+     ],
+     "approved": "2021-07-22",
+     "expires": "2026-07-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td-td2/3.2/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td-td2/3.2/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "3.1B",
+     "devices": [
+      "TD",
+      "TD2"
+     ],
+     "approved": "2019-12-17",
+     "expires": "2024-12-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td-td2/3.1B/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td-td2/3.1B/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "3.0C",
+     "devices": [
+      "TD",
+      "TD2"
+     ],
+     "approved": "2018-10-24",
+     "expires": "2023-10-31",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td-td2/3.0C/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td-td2/3.0C/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.2",
+     "devices": [
+      "TD"
+     ],
+     "approved": "2014-12-19",
+     "expires": "2019-11-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td/2.2/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td/2.2/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.2",
+     "devices": [
+      "TD2"
+     ],
+     "approved": "2014-12-19",
+     "expires": "2019-11-30",
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td2/2.2/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td2/2.2/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.1",
+     "devices": [
+      "TD"
+     ],
+     "approved": "2012-05-29",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td/2.1/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td/2.1/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.1",
+     "devices": [
+      "TD2"
+     ],
+     "approved": "2012-05-11",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td2/2.1/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td2/2.1/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "2.0",
+     "devices": [
+      "TD"
+     ],
+     "approved": "2012-03-09",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td/2.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td/2.0/QAG.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "TD2"
+     ],
+     "approved": "2010-07-01",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td2/1.0/LOA.pdf"
+      }
+     ]
+    },
+    {
+     "version": "1.0",
+     "devices": [
+      "TD"
+     ],
+     "approved": "2010-04-26",
+     "expires": null,
+     "files": [
+      {
+       "label": "LOA",
+       "path": "docs/archive/td/1.0/LOA.pdf"
+      },
+      {
+       "label": "QAG",
+       "path": "docs/archive/td/1.0/QAG.pdf"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
