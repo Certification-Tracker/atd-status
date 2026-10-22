@@ -155,7 +155,7 @@ function renderDevice(r){
   let docs;
   if(pf){
     docs = `
-      <div class="superseded" role="status"><span><b>Superseded.</b> ${esc(vLabel(p.version))} (${esc(p.devices.join(', '))}), ${esc(fileLabel(pf.label))}. Shown for reference; the current approval is ${vLabel(d.qag)}.</span>
+      <div class="superseded" role="status"><span><b>Superseded.</b> ${esc(vLabel(p.version))} (${esc(p.devices.join(', '))}), ${esc(fileLabel(pf.label))}. Shown for reference.</span>
         <a href="${deviceHref(d)}">Back to current</a></div>
       ${viewerHtml(`${d.name} ${vLabel(p.version)} ${pf.label}`, pf.path, downloadName(d.name, p.version, pf.label))}`;
   }else{
@@ -181,7 +181,7 @@ function renderDevice(r){
     <div class="detail-head">
       <h2 class="detail-title">${esc(d.name)} <span class="title-count">${esc(d.type)}</span></h2>
     </div>
-    ${pf ? '' : `<div class="field-grid">
+    ${pf ? `<div class="current-note">Current Version: ${vLabel(d.qag)}</div>` : `<div class="field-grid">
       ${field('Approved QAG', vLabel(d.qag))}
       ${field('Approved', fmtDate(d.approved))}
       ${field('Expires', fmtDate(d.expires))}

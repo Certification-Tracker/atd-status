@@ -8,7 +8,7 @@
   --card:#FFFFFF; --card-line:#4A545B; --line:#D8DCDF; --line-strong:#B4BBC0; --hover:#E1E5E8;
   --neutral-bg:#E6E9EB; --ink:#23292E; --ink-soft:#4A545B; --ink-faint:#6A747B;
   --rust:#C2410C; --rust-bg:#FFEDD5; --gold:#875A00; --gold-bg:#FCEFD3; --sage:#2E6A2A; --sage-bg:#E2F0DE;
-  --field-bg:#FFFFFF; --action:#1D5FA8; --action-ink:#1D5FA8;
+  --field-bg:#FFFFFF; --alert:#A70E13; --action:#1D5FA8; --action-ink:#1D5FA8;
   --radius:10px;
   --serif: Calibri, "Segoe UI", Georgia, serif;
   --sans: Calibri, "Segoe UI", -apple-system, BlinkMacSystemFont, Helvetica, Arial, sans-serif;
@@ -19,7 +19,7 @@
     --card:#353D43; --card-line:#A70E13; --line:#4A545B; --line-strong:#7C8790; --hover:#434C53;
     --neutral-bg:#454E55; --ink:#FFFFFF; --ink-soft:#E4E8EB; --ink-faint:#B8C1C7;
     --rust:#FF9D66; --rust-bg:#4E3325; --gold:#E7C07E; --gold-bg:#4A3D22; --sage:#C6E0BE; --sage-bg:#2E4630;
-    --field-bg:#000000; --action:#2F6DB5; --action-ink:#6FA8E8;
+    --field-bg:#000000; --alert:#FF8E91; --action:#2F6DB5; --action-ink:#6FA8E8;
   }
 }
 
@@ -104,3 +104,4 @@ a.atd-tr:focus-visible{outline:2px solid var(--action);outline-offset:-2px;}
 .prev-row b{color:var(--ink);}
 .prev-files{display:flex;gap:4px 12px;flex-wrap:wrap;justify-content:flex-end;}
 @media (max-width: 640px){ .prev-row{grid-template-columns:1fr auto;} .prev-row .prev-dates{grid-column:1/-1;grid-row:2;} }
+.current-note{margin-top:8px;font-size:var(--fs-body);font-weight:700;color:var(--alert);}
