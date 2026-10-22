@@ -1,8 +1,8 @@
 // ATD QAG/LOA Status service worker: makes the site installable as an app and keeps the last device list
 // for when the network is down. Always asks the network first, so changes show up right away.
 // PDFs are not cached here (the browser's own cache handles them).
-const CACHE = 'atd-status-1.2.0';
-const SHELL = ['./', 'index.html', 'assets/app.css?v=1.2.0', 'assets/app.js?v=1.2.0', 'manifest.webmanifest', 'icons/icon.svg'];
+const CACHE = 'atd-status-1.1.0';
+const SHELL = ['./', 'index.html', 'assets/app.css?v=1.1.0', 'assets/app.js?v=1.1.0', 'manifest.webmanifest', 'icons/icon.svg'];
 
 self.addEventListener('install', e => {
   e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).then(() => self.skipWaiting()));
