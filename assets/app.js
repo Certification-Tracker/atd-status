@@ -4,8 +4,7 @@
 // everything in them is already public on the Redbird knowledge base.
 'use strict';
 
-const YELLOW_DAYS = 365;   // 180 to 365 days to expiry
-const RED_DAYS = 180;      // under 180 days
+const SOON_DAYS = 365;     // Expires Soon: 365 days or less to expiry (ATD Status 1.1; the tracker keeps four tags)
 
 const ICON = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
@@ -39,18 +38,16 @@ const textHas = (v, t) => String(v || '').toLowerCase().includes(t);
 
 // ---- Status: the color tag only ----
 const BANDS = {
-  green: {label: 'Green', cls: 'sage', hint: 'More than 365 days to expiry'},
-  yellow: {label: 'Yellow', cls: 'gold', hint: '180 to 365 days to expiry'},
-  red: {label: 'Red', cls: 'overdue', hint: 'Under 180 days to expiry'},
+  current: {label: 'Current', cls: 'sage', hint: 'More than 365 days to expiry'},
+  soon: {label: 'Expires Soon', cls: 'gold', hint: '365 days or less to expiry'},
   expired: {label: 'Expired', cls: 'overdue', hint: 'Past its expiration date'}
 };
 function band(d){
   const n = daysUntil(d.expires);
   if(n === null) return null;
   if(n < 0) return 'expired';
-  if(n < RED_DAYS) return 'red';
-  if(n <= YELLOW_DAYS) return 'yellow';
-  return 'green';
+  if(n <= SOON_DAYS) return 'soon';
+  return 'current';
 }
 function bandPill(d){
   const b = BANDS[band(d)];
@@ -118,7 +115,7 @@ function renderList(){
       </label>
     </div>
     <div id="table">${tableHtml()}</div>
-    <div class="muted search-note">Green: more than 365 days to expiry. Yellow: 180 to 365 days. Red: under 180 days.</div>`;
+    <div class="muted search-note">Current: more than 365 days to expiry. Expires Soon: 365 days or less. Expired: past the expiry date.</div>`;
   const q = document.getElementById('q');
   q.addEventListener('input', () => { query = q.value; document.getElementById('table').innerHTML = tableHtml(); });
 }
