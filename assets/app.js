@@ -10,6 +10,7 @@ const ICON = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
   back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
   file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/></svg>',
+  download: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>',
   external: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6"/><path d="M20 4l-9 9"/><path d="M18 14v6H4V6h6"/></svg>'
 };
 
@@ -127,10 +128,18 @@ function prevDates(p){
   return [p.approved ? 'Approved ' + fmtDate(p.approved) : '', p.expires ? 'expires ' + fmtDate(p.expires) : ''].filter(Boolean).join(', ');
 }
 
-function viewerHtml(title, path){
+// Download name: device, version, document, e.g. "TD_TD2_v3.3_QAG.pdf" or "FMX_LD_SD_MCX_v4.4_LOA_original.pdf".
+function downloadName(device, version, label){
+  const part = x => String(x || '').replace(/\(([^)]*)\)/g, ' $1').replace(/\d{4}-\d{2}-\d{2}/g, '').replace(/[\/\\:*?"<>|,\s]+/g, '_').replace(/_+/g, '_').replace(/^_|_$/g, '');
+  return [part(device), vLabel(version), part(label)].filter(Boolean).join('_') + '.pdf';
+}
+
+// The PDF without the browser's own toolbar; Open in new window and Download sit above it.
+function viewerHtml(title, path, fileName){
   const open = `<a class="btn-text" href="${esc(path)}" target="_blank" rel="noopener">${ICON.external}<span>Open in new window</span></a>`;
-  if(isPhone()) return `<div class="doc-actions"><a class="open-doc-btn" href="${esc(path)}" target="_blank" rel="noopener">${ICON.file}<span>Open ${esc(title)}</span></a></div>`;
-  return `<div class="doc-actions">${open}</div><iframe class="pdf-frame" src="${esc(path)}#view=FitH" title="${esc(title)}"></iframe>`;
+  const save = `<a class="btn-text" href="${esc(path)}" download="${esc(fileName)}">${ICON.download}<span>Download</span></a>`;
+  if(isPhone()) return `<div class="doc-actions"><a class="open-doc-btn" href="${esc(path)}" target="_blank" rel="noopener">${ICON.file}<span>Open ${esc(title)}</span></a>${save}</div>`;
+  return `<div class="doc-actions">${open}${save}</div><iframe class="pdf-frame" src="${esc(path)}#toolbar=0&amp;navpanes=0&amp;view=FitH" title="${esc(title)}"></iframe>`;
 }
 
 function renderDevice(r){
@@ -148,12 +157,12 @@ function renderDevice(r){
     docs = `
       <div class="superseded" role="status"><span><b>Superseded.</b> ${esc(vLabel(p.version))} (${esc(p.devices.join(', '))}), ${esc(fileLabel(pf.label))}. Shown for reference; the current approval is ${vLabel(d.qag)}.</span>
         <a href="${deviceHref(d)}">Back to current</a></div>
-      ${viewerHtml(`${d.name} ${vLabel(p.version)} ${pf.label}`, pf.path)}`;
+      ${viewerHtml(`${d.name} ${vLabel(p.version)} ${pf.label}`, pf.path, downloadName(d.name, p.version, pf.label))}`;
   }else{
     const kinds = ['loa', 'qag'].filter(k => d.docs[k]);
     docs = `
       <div class="tabs" role="tablist">${kinds.map(k => `<a class="tab ${k === doc ? 'on' : ''}" role="tab" aria-selected="${k === doc}" href="${deviceHref(d, k)}">${ICON.file} ${k.toUpperCase()}</a>`).join('')}</div>
-      ${viewerHtml(`${d.name} ${doc.toUpperCase()}`, d.docs[doc])}`;
+      ${viewerHtml(`${d.name} ${doc.toUpperCase()}`, d.docs[doc], downloadName(d.name, d.qag, doc.toUpperCase()))}`;
   }
 
   const prevHtml = prev.length ? `
