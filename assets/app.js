@@ -1,10 +1,10 @@
-// ATD Status: a read-only view of each Redbird ATD device's current FAA approval, with its LOA and QAG.
+// ATD QAG/LOA Status (repo atd-status): a read-only view of each Redbird ATD device's current FAA approval, with its LOA and QAG.
 // Its own copy of the Certification Tracker's ATD Approvals page code (assets/atd.js 3.2), trimmed for
 // support colleagues. data/devices.json and docs/ come from tracker-data (scripts/build_atd_status.py);
 // everything in them is already public on the Redbird knowledge base.
 'use strict';
 
-const SOON_DAYS = 365;     // Expires Soon: 365 days or less to expiry (ATD Status 1.1; the tracker keeps four tags)
+const SOON_DAYS = 365;     // Expires Soon: 365 days or less to expiry (since 1.1; the tracker keeps four tags)
 
 const ICON = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
@@ -106,7 +106,7 @@ function tableHtml(){
 }
 
 function renderList(){
-  document.title = 'ATD Status';
+  document.title = 'ATD QAG/LOA Status';
   main.innerHTML = `
     <div class="detail-head">
       <h2 class="detail-title">ATD Approvals</h2>
@@ -136,7 +136,7 @@ function viewerHtml(title, path){
 function renderDevice(r){
   const d = devices.find(x => x.id === r.id);
   if(!d){ main.innerHTML = `<a class="back" href="#/">${ICON.back}ATD Approvals</a><div class="muted list-empty">This device isn't in the list.</div>`; return; }
-  document.title = `${d.name} · ATD Status`;
+  document.title = `${d.name} · ATD QAG/LOA Status`;
   const prev = d.previous || [];
   const p = r.doc === 'prev' ? prev[r.prev] : null;
   const pf = p ? (p.files[r.file] || p.files[0]) : null;

@@ -1,6 +1,6 @@
 {
-  "name": "ATD Status",
-  "short_name": "ATD Status",
+  "name": "ATD QAG/LOA Status",
+  "short_name": "ATD QAG/LOA Status",
   "description": "Current FAA approvals for Redbird ATD devices, with their LOA and QAG.",
   "id": "./",
   "start_url": "./",
