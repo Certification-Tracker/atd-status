@@ -181,12 +181,12 @@ function renderDevice(r){
     <div class="detail-head">
       <h2 class="detail-title">${esc(d.name)} <span class="title-count">${esc(d.type)}</span></h2>
     </div>
-    <div class="field-grid">
+    ${pf ? '' : `<div class="field-grid">
       ${field('Approved QAG', vLabel(d.qag))}
       ${field('Approved', fmtDate(d.approved))}
       ${field('Expires', fmtDate(d.expires))}
       ${field('Status', bandPill(d))}
-    </div>
+    </div>`}
     ${docs}
     ${prevHtml}`;
 }
