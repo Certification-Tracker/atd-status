@@ -1,0 +1,47 @@
+name: Deploy
+
+# Publishes the site: the code on main plus the latest data on the "data" branch, which
+# tracker-data's "ATD Status sync" job replaces whenever ATD information changes.
+
+on:
+  push:
+    branches: [main]
+  repository_dispatch:
+    types: [atd-data]       # sent by tracker-data after each sync
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v5
+        with:
+          ref: main
+          path: site
+      - name: Add the latest data
+        run: |
+          if git -C site ls-remote --exit-code origin refs/heads/data >/dev/null; then
+            git -C site fetch --quiet --depth 1 origin data
+            git -C site archive FETCH_HEAD | tar -x -C site
+          else
+            echo "No data branch yet; publishing the site without data."
+          fi
+          rm -rf site/.git site/.github
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: site
+      - id: deployment
+        uses: actions/deploy-pages@v4
