@@ -4,7 +4,7 @@
 // everything in them is already public on the Redbird knowledge base.
 'use strict';
 
-const SOON_DAYS = 365;     // Expires Soon: 365 days or less to expiry (since 1.1; the tracker keeps four tags)
+const SOON_DAYS = 365;     // Expires Soon: 365 days or less to expiry (the tracker keeps four tags)
 
 const ICON = {
   search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',

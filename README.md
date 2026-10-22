@@ -1,6 +1,6 @@
 # ATD QAG/LOA Status
 
-The app was named ATD Status until 1.1.0; the repo and web address keep the `atd-status` name.
+The repo and web address use the working name `atd-status`.
 
 A read-only view of each Redbird ATD device's current FAA approval, with its LOA and QAG, for Redbird
 support colleagues. Everything shown is already public on the Redbird knowledge base.
