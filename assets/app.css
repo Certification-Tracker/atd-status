@@ -69,7 +69,7 @@ a.atd-tr:focus-visible{outline:2px solid var(--action);outline-offset:-2px;}
 .atd-tr b{color:var(--ink);}
 .atd-sub{display:block;font-size:var(--fs-xs);color:var(--ink-faint);}
 .atd-group{padding:14px 6px 6px;font-size:var(--fs-body);font-weight:700;color:var(--ink);border-bottom:1px solid var(--line-strong);}
-.group-hint{margin-left:14px;font-size:var(--fs-sm);font-weight:400;color:var(--ink-faint);}
+.list-hint{margin-top:12px;font-size:var(--fs-sm);color:var(--ink-faint);}
 .cell-label{display:none;}
 @media (max-width: 720px){
   .atd-th{display:none;}
