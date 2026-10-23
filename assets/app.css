@@ -50,10 +50,6 @@ h1{color:var(--on-bg);font-family:var(--serif);font-weight:700;font-size:var(--f
 .back:hover{text-decoration:underline;}
 .back svg,.btn-text svg,.tab svg{width:16px;height:16px;flex-shrink:0;}
 
-.search-box{display:flex;align-items:center;gap:8px;max-width:420px;width:100%;border:1px solid var(--line-strong);border-radius:8px;background:var(--field-bg);padding:7px 10px;}
-.search-box svg{width:16px;height:16px;color:var(--ink-faint);flex-shrink:0;}
-.search-box input{flex:1;min-width:0;border:none;background:none;color:var(--ink);font-family:var(--sans);font-size:var(--fs-input);outline:none;padding:0;}
-.search-box:focus-within{border-color:var(--action);box-shadow:0 0 0 2px color-mix(in srgb, var(--action) 30%, transparent);}
 
 .pill{font-size:var(--fs-xs);padding:3px 9px;border-radius:99px;white-space:nowrap;font-weight:600;display:inline-block;}
 .pill-overdue{background:var(--rust-bg);color:var(--rust);}

@@ -7,7 +7,6 @@
 const SOON_DAYS = 365;     // Expires Soon: 365 days or less to expiry (the tracker keeps four tags)
 
 const ICON = {
-  search: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>',
   back: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 18l-6-6 6-6"/></svg>',
   file: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6v18h12V7z"/><path d="M14 3v4h4"/></svg>',
   download: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v11"/><path d="M7 10l5 5 5-5"/><path d="M5 20h14"/></svg>',
@@ -17,7 +16,6 @@ const ICON = {
 let devices = [];
 let loaded = false;
 let loadError = '';
-let query = '';
 const main = document.getElementById('main');
 
 // ---- Small helpers ----
@@ -35,7 +33,6 @@ function daysUntil(iso){
   const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
   return Math.round((Date.UTC(+m[1], +m[2] - 1, +m[3]) - today) / 86400000);
 }
-const textHas = (v, t) => String(v || '').toLowerCase().includes(t);
 
 // ---- Status: the color tag only ----
 const BANDS = {
@@ -83,15 +80,9 @@ const fileLabel = l => String(l).replace(/\d{4}-\d{2}-\d{2}/g, fmtDate);
 const prevHref = (d, i, f) => `#/d/${encodeURIComponent(d.id)}/v/${i}/${f}`;
 
 // ---- The device list ----
-function filtered(){
-  const t = query.trim().toLowerCase();
-  if(!t) return devices;
-  return devices.filter(d => d.type.toLowerCase() === t || [d.name, vLabel(d.qag)].some(v => textHas(v, t)));
-}
-
 function tableHtml(){
-  const list = filtered();
-  if(!list.length) return `<div class="muted list-empty">${devices.length ? 'No devices match your search.' : 'No devices yet.'}</div>`;
+  const list = devices;
+  if(!list.length) return `<div class="muted list-empty">No devices yet.</div>`;
   return `
     <div class="atd-table" role="table" aria-label="ATD devices">
       <div class="atd-tr atd-th" role="row"><span role="columnheader">Device</span><span role="columnheader">Approved QAG</span><span role="columnheader">Approved</span><span role="columnheader">Expires</span><span role="columnheader">Status</span></div>
@@ -111,15 +102,10 @@ function renderList(){
   main.innerHTML = `
     <div class="detail-head">
       <h2 class="detail-title">ATD Approvals</h2>
-      <label class="search-box">${ICON.search}
-        <input id="q" type="search" placeholder="Search devices" aria-label="Search devices" value="${esc(query)}" autocomplete="off">
-      </label>
     </div>
     <div class="list-hint">Click on device for additional information</div>
     <div id="table">${tableHtml()}</div>
     <div class="muted search-note">Current: more than 365 days to expiry. Expires Soon: 365 days or less. Expired: past the expiry date.</div>`;
-  const q = document.getElementById('q');
-  q.addEventListener('input', () => { query = q.value; document.getElementById('table').innerHTML = tableHtml(); });
 }
 
 // ---- One device ----
