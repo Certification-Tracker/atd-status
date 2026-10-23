@@ -95,7 +95,7 @@ function tableHtml(){
   return `
     <div class="atd-table" role="table" aria-label="ATD devices">
       <div class="atd-tr atd-th" role="row"><span role="columnheader">Device</span><span role="columnheader">Approved QAG</span><span role="columnheader">Approved</span><span role="columnheader">Expires</span><span role="columnheader">Status</span></div>
-      ${groups(list).map(g => `<div class="atd-group" role="row"><span role="cell">${esc(g.type)} <span class="title-count">(${g.devices.length})</span></span></div>` + g.devices.map(d => `
+      ${groups(list).map((g, gi) => `<div class="atd-group" role="row"><span role="cell">${esc(g.type)} <span class="title-count">(${g.devices.length})</span>${gi === 0 ? '<span class="group-hint">Click device for additional details</span>' : ''}</span></div>` + g.devices.map(d => `
         <a class="atd-tr" role="row" href="${deviceHref(d)}">
           <span role="cell"><b>${esc(d.name)}</b></span>
           <span role="cell"><span class="cell-label">Approved QAG</span>${vLabel(d.qag)}</span>
